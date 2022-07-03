@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            margin: center;
+            height: 50%;
+            width: 500px;
+        }
+        div {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            height: 30%;
+            width: 200px;
+            margin: 3px;
+            line-height: 20px;
+            display: block;
+        }
+        div:hover {
+            background-color: rgba(233, 115, 115, 0.219);
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <!--<form name="curso1" id="curso1" action="#" method="post"></form> --->
+    <div>
+    <form action="#" method="post">Login. <br>
+
+        <label for="Nome">Nome</label>
+        <input type="text" name="fnome" id="fnome" value="Insira seu nome"><br>
+        <label for="senha">Senha</label>
+        <input type="password" name="fsenha" id="senha" value="Insira sua senha">
+        <input type="submit" value="Enviar">
+    </form>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+    
+
+<script>
+    var fm = document.forms[0]
+    var el = fm.elements
+
+    for(var i = 0; i < el.length-1; i++){
+        el[i].style.backgroundColor = "#ddd"
+        el[i].value="Guilherme"
+    }
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
