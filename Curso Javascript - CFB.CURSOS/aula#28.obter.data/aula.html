@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+         //                    DATA DE HOJE: 03/07/2022.
+    var dt = new Date()          //necessita aplicar esse comando primeiro para obter a data completa
+    var dia = dt.getDate()      //comando para obter o DIA (em numero) do mês
+    var diasem = dt.getDay()    // comando para obter o dia da semana, começa com 0 (domingo) 1 (segunda) e assim por diante
+    var mes = dt.getMonth()      //  apra obter o mês, 0 (janeiro) 1 (fevereiro) e assim por diante
+    var ano = dt.getFullYear()   // este comando para obter o ano completo, no casso 2022.
+    var hora = dt.getHours()     // para obter a hora, neste comando retorna somente a hora (13:20 retornará - 13 - somente)
+    var minutos = dt.getMinutes()    //comando para retornar os minutos
+
+    var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+    var semanas = ["Domingo","Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"]
+    
+    //document.write(dt)
+        document.write(`Dia: ${dia}<br>`)
+        document.write(`Dia da Semana: ${diasem}<br>`)
+        document.write(`Mês: ${mes}<br>`)
+        document.write(`Ano: ${ano}<br>`)
+        document.write(`A data de hoje é: ${semanas[diasem]}, ${dia} de ${meses[mes]} de ${ano}! E a hora de agora é: ${hora}:${minutos}! (Horário de Brasilia)`)
+</script>
+</body>
+</html>
