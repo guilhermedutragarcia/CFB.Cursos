@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#dv1 {
+            background-color: #ff7e7e;
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;  
+            position: absolute;          
+
+        }
+    </style>
+</head>
+<body>
+    <div id="dv1">
+
+    </div>
+    <script>
+        var px = 0 
+        var py = 0
+
+        document.addEventListener("keydown", move)
+
+        function move() {
+            var obj = document.getElementById("dv1")
+            var tecla = event.keyCode //codigos 37-esquerda 38-cima 39-direita 40-baixo
+            if(tecla == 37){
+                px -= 10
+                obj.style.left = px + "px"
+            } else if(tecla == 38) {
+                py -= 10
+                obj.style.top = py + "px"
+            }else if(tecla == 39) {
+                px += 10
+                obj.style.right = px + "px"
+            }else if(tecla == 40) {
+                py += 10
+                obj.style.top = py + "px"
+            }else if(tecla == 13) {
+                alert('Evento keydown removido!')
+                document.removeEventListener("keyDown", move )
+            }
+            
+        }
+        document.addEventListener("keydown", move)
+
+
+    </script>
+</body>
+</html>
