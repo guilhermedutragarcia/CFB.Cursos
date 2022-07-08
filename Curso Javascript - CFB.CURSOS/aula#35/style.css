@@ -1,0 +1,15 @@
+body {
+    padding: 20px;
+    margin: auto;
+}
+div#caixa {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: auto;
+}
+div#botoes {
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
