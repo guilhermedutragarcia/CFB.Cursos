@@ -13,10 +13,11 @@
     <div id="caixa"></div>
 
     <div id="botoes">
-        <input type="button" value="Iniciar">
-        <input type="button" value="Parar">
+        <input type="button" value="Iniciar" onclick="iniciar()">
+        <input type="button" value="Parar" onclick="parar()">
     </div>
 <script>
+        var tempo
 
         function mudacor() {
         var obj = document.getElementById("caixa")
@@ -24,8 +25,20 @@
         var g = Math.floor(Math.random()*255)
         var b = Math.floor(Math.random()*255)
         obj.style.backgroundColor="rgb("+r+","+g+","+b+")"
+
     }
+    // var tempo = setTimeout(mudacor, 50)        - desta maneira, colocando fora da função e escrito setTimeout, executa somente 1 vez. Se colocar dentro da função, ficará em looping
+
+    //var tempo = setInterval(mudacor, 50)        //colocando desta maneira, fora da função, ficará em looping.
+
+        function iniciar () {
+            tempo = setInterval(mudacor, 50)
+        }
+        function parar () {
+            clearInterval (tempo)
+        }
 </script>
+
     
 </body>
 </html>
