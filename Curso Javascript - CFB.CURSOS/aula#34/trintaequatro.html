@@ -7,27 +7,26 @@
     <title>Document</title>
     <style>
         div#dv1 {
-            background-color: #ff7e7e;
+            /*background-color: #ff7e7e;*/
             height: 200px;
             width: 200px;
             border: 1px solid black;  
-            position: absolute;          
-
+            position: absolute;
         }
     </style>
 </head>
 <body>
-    <div id="dv1">
+    <div id="dv1" onclick="move()">
 
     </div>
     <script>
         var px = 0 
         var py = 0
-
-        document.addEventListener("keydown", move)
-
+        //document.addEventListener("keydown", move)
         function move() {
+            document.addEventListener("keydown", move)
             var obj = document.getElementById("dv1")
+            obj.style.backgroundColor = "#ff7e7e"
             var tecla = event.keyCode //codigos 37-esquerda 38-cima 39-direita 40-baixo
             if(tecla == 37){
                 px -= 10
@@ -37,17 +36,16 @@
                 obj.style.top = py + "px"
             }else if(tecla == 39) {
                 px += 10
-                obj.style.right = px + "px"
+                obj.style.left = px + "px"
             }else if(tecla == 40) {
                 py += 10
                 obj.style.top = py + "px"
             }else if(tecla == 13) {
-                alert('Evento keydown removido!')
-                document.removeEventListener("keyDown", move )
-            }
-            
+                window.alert('Evento keydown removido!')
+                document.removeEventListener("keydown", move)
+            } 
         }
-        document.addEventListener("keydown", move)
+       // document.addEventListener("keydown", move)
 
 
     </script>
