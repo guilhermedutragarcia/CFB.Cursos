@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         div#dv1 {
-            /*background-color: #ff7e7e;*/
+            background-color: #ffffff;
             height: 200px;
             width: 200px;
             border: 1px solid black;  
@@ -16,13 +16,15 @@
     </style>
 </head>
 <body>
-    <div id="dv1" onclick="move()">
-
-    </div>
+    <div id="dv1" onclick="move()"> </div>
     <script>
         var px = 0 
         var py = 0
-        //document.addEventListener("keydown", move)
+
+        document.addEventListener("click", function alerta(){
+                window.alert('Evento keydown adicionado!')
+        })
+
         function move() {
             document.addEventListener("keydown", move)
             var obj = document.getElementById("dv1")
@@ -43,10 +45,9 @@
             }else if(tecla == 13) {
                 window.alert('Evento keydown removido!')
                 document.removeEventListener("keydown", move)
+                obj.style.backgroundColor = "#ffffff"
             } 
         }
-       // document.addEventListener("keydown", move)
-
 
     </script>
 </body>
